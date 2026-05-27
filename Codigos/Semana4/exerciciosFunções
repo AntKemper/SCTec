@@ -1,0 +1,182 @@
+// Lista de exercícios sobre funções em JavaScript
+
+/*
+1. Crie uma função chamada `saudar` que recebe um nome como parâmetro
+   e retorna a mensagem: "Olá, <nome>! Seja bem-vindo(a)!".
+*/
+
+function saudar(nome) {
+    //return `Fala, ${nome}`
+    console.log(`Olá colega: ${nome}`);
+}
+console.log(saudar('Antonio'))
+
+/*
+2. Crie uma função chamada `somar` que recebe dois números e retorna a soma.
+   Teste a função com valores diferentes.
+*/
+ function somar(num01,num02){
+    return `A soma é: ${num01 + num02}`
+ }
+ console.log(somar(4,1998))
+
+/*
+3. Crie uma função chamada `estaPar` que recebe um número e retorna `true`
+   se ele for par, ou `false` caso contrário.
+*/
+let resposta = false;
+let numero = false;
+function staPar(numero){
+        if( numero % 2 == 0){
+        resposta = true;
+        }
+        return `Valor é ${numero % 2 == 0}`
+    }
+
+    console.log(staPar(20))
+
+//Outra solução obs: Precisa ser deito em outro arquivo sozinho
+
+let resposta = false;
+const prompt = require("prompt-sync")()
+let numero = (prompt('Opção: '));
+function staPar(numero){
+      
+        if( numero % 2 == 0){
+        resposta = true;
+        }
+    }
+    staPar(numero)
+    console.log(`Valor é: ${resposta}`)
+
+/*
+4. Crie uma função chamada `areaRetangulo` que recebe a largura e a altura de um
+   retângulo e retorna a área.
+*/
+
+function areaRectangle(base, height) {
+
+        
+        return `Retangle are: ${base*height}`
+}
+
+console.log(areaRectangle(2,2))
+
+// Outra forma, obs: Precisa ser feira em outro arquivo sozinho
+
+const prompt = require("prompt-sync")();
+let base = (prompt('Base: '));
+let height = (prompt('height: '));
+
+function areaRectangle(base, height) {
+
+        return `Retangle are: ${(base*height)}`
+}
+console.log(areaRectangle(base, height))
+
+
+
+
+/*
+5. Crie uma função chamada `calcularMedia` que recebe um array de números e
+   retorna a média desses valores.
+*/
+
+let media = 0
+let divisor = 0
+function averageArray(...nums){
+for(let i=0; i< nums.length; i++){
+    media += nums[i];
+    divisor += i;
+    
+}
+return media/divisor
+}
+console.log(averageArray(1,3,5))
+
+/*
+6. Crie uma função chamada `maiorNumero` que recebe um array de números e retorna
+   o maior valor presente no array.
+*/
+
+function majorNumber(...nums){
+   let nmajor = 0
+   for(let i = 0; i < nums.length; i++){
+      if (nums[i] > nmajor) {
+         nmajor = nums[i]
+      }
+   }
+      return `O maior numero é ${nmajor}`
+}
+
+console.log(majorNumber(2,44,4,11))
+
+
+/*
+7. Crie uma função chamada `multiplicarElementos` que recebe um array e um número.
+   A função deve retornar um novo array com cada elemento multiplicado pelo número.
+*/
+function multiArray(...nums){
+   multiplicador = 2;
+      for(let i = 0; i < nums.length; i++){
+      nums[i] *= multiplicador
+      }
+   
+      console.log(...nums)
+}
+
+multiArray(2,44,4,11)
+/*
+8. Crie uma função chamada `contadorDeVogais` que recebe uma string e retorna o
+   número de vogais encontradas na palavra ou frase.
+*/
+
+
+/*
+9. Crie uma função chamada `calcularIMC` que recebe peso (kg) e altura (m)
+   e retorna o índice de massa corporal (IMC) com duas casas decimais.
+*/
+
+function calcIMC(height, weight){
+  
+   let imc = (weight/height**2).toFixed(2)
+   return `Seu IMC é: ${(imc)}`
+}
+
+console.log(calcIMC(1.77, 80))
+
+
+
+
+   /* outra forma
+   const prompt = require("prompt-sync")();
+function calcIMC(height, weight){
+   
+     return `Seu IMC é: ${(weight/height**2).toFixed(2)}`
+}
+console.log('Digite abaixo seus dados.');
+let height = (prompt('Altura: '));
+let weight = (prompt('Peso: '));
+console.log(calcIMC(height,weight))
+
+/*
+
+
+/*
+10. Crie uma função chamada `validarSenha` que recebe uma senha e retorna `true`
+    se ela tiver pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula
+    e um número. Caso contrário, retorna `false`.
+*/
+
+
+// Exemplos de uso das funções
+console.log(saudar('Aluno'));
+console.log(somar(5, 7));
+console.log(estaPar(10));
+console.log(areaRetangulo(4, 5));
+console.log(calcularMedia([8, 7, 9]));
+console.log(maiorNumero([3, 10, 6]));
+console.log(multiplicarElementos([1, 2, 3], 2));
+console.log(contadorDeVogais('Desenvolvimento')); 
+console.log(calcularIMC(70, 1.75));
+console.log(validarSenha('Senha123'));

@@ -1,0 +1,15 @@
+let opcao 
+
+do{
+    console.log('1. Listar')
+    console.log('2. Cadastrar')
+    console.log('3. Sair')
+    opcao = Number(prompt('Opção: '))
+
+    switch (opcao){
+        case 1: console.log('Abrindo listar...'); break;
+        case 2: console.log('Cadastrar...'); break;
+        case 3: console.log('Até logo...'); break;
+        default: console.log('Opção Inválida...')
+    }
+}while(opcao !== 3)
